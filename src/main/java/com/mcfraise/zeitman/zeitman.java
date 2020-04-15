@@ -14,7 +14,7 @@ public final class zeitman extends JavaPlugin {
 	@Override
 	public void onEnable()
 	{
-		int cycle_lenght = 45; // In minutes
+		int cycle_length = 45; // In minutes
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm"); // Assign hour format
 		BukkitScheduler scheduler = getServer().getScheduler();
 		scheduler.scheduleSyncRepeatingTask(this, new Runnable() {
@@ -24,7 +24,7 @@ public final class zeitman extends JavaPlugin {
 				String msg = ChatColor.DARK_GREEN + "Zeitman" + ChatColor.WHITE + " : It's " + dtf.format(now);
 				Bukkit.broadcastMessage(msg);
 			}
-		}, 0L, (cycle_lenght * (60 * 20L)));
+		}, 0L, (cycle_length * (60 * 20L)));
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public final class zeitman extends JavaPlugin {
 		if (cmd.getName().equalsIgnoreCase("zeit")) {
 			LocalDateTime now = LocalDateTime.now();
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
-			String msg = ChatColor.DARK_GREEN + "Zeitman" + ChatColor.WHITE + " : Il est " + dtf.format(now);
+			String msg = ChatColor.DARK_GREEN + "Zeitman" + ChatColor.WHITE + " : It's " + dtf.format(now);
 			Bukkit.broadcastMessage(msg);
 			return true;
 		}
