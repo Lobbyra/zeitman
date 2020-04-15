@@ -21,7 +21,6 @@ public final class zeitman extends JavaPlugin {
 				LocalDateTime now = LocalDateTime.now();
 				String msg = ChatColor.DARK_GREEN + "Zeitman" + ChatColor.WHITE + " : It's " + dtf.format(now);
 				Bukkit.broadcastMessage(msg);
-			}
 		}, 0L, (cycle_length * (60 * 20L)));
 	}
 
