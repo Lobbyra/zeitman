@@ -1,0 +1,10 @@
+name: Zeitman
+main: com.mcfraise.zeitman.zeitman
+version: 0.01
+commands:
+  zeit:
+    description: Display time.
+permissions:
+  zeitman.command:
+    description: Allow access to call zeitman
+    default: not op
