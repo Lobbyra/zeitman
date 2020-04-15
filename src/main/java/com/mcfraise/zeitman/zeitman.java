@@ -17,9 +17,7 @@ public final class zeitman extends JavaPlugin {
 		int cycle_length = 45; // In minutes
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm"); // Assign hour format
 		BukkitScheduler scheduler = getServer().getScheduler();
-		scheduler.scheduleSyncRepeatingTask(this, new Runnable() {
-			@Override
-			public void run () {
+		scheduler.scheduleSyncRepeatingTask(this, () -> {
 				LocalDateTime now = LocalDateTime.now();
 				String msg = ChatColor.DARK_GREEN + "Zeitman" + ChatColor.WHITE + " : It's " + dtf.format(now);
 				Bukkit.broadcastMessage(msg);
